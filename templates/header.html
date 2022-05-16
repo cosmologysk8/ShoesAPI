@@ -1,0 +1,40 @@
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load bootstrap4 %}
+    {% bootstrap_css %}
+
+</head>
+<body>
+<div class="container-fluid">
+   <nav class="navbar fixed-top navbar-dark bg-dark navbar-expand-lg">
+        <div class="container-fluid ">
+            <a class="navbar-brand" href="/shoes/index/">
+                <p>Shoes Land</p>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/shoes/index/">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/shoes/zapatillas">Zapatillas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/shoes/zapatillas/crear">Crear</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+</body>
+</html>
+{% endblock %}

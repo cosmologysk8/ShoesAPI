@@ -1,0 +1,30 @@
+{% include 'header.html'%}
+{% block content %}
+
+<div class="container" style="margin-top: 100px">
+    <h1>Zapatillas</h1>
+</div>
+
+<div class="main">
+    <div class="container">
+         <div class="row mt-1">
+
+             {% for shoes in shoes_list %}
+            <div class="col-4">
+                <div class="card">
+                    <img class="card-img-top" src="{{ shoes.imageUrl }}" width="250" height="200">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ shoes.nombre }}</h5>
+                        <h6 class="card-subtitle text-muted mb-2">{{ shoes.priceShoes }} €</h6>
+                        <p class="card-text">{{ shoes.descriptionShoes }}</p>
+                        <a href="/shoes/zapatillas/{{ shoes.id }}" class="btn btn-outline-primary">Mostrar detalles</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+</div>
+{% endblock %}

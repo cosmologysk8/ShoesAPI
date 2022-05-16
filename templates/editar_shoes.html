@@ -1,0 +1,54 @@
+{% include "header.html" %}
+{% block content %}
+
+    <div class="container" style="align-items: center; margin-top: 100px">
+        <form action="/shoes/zapatillas/editar/{{ shoes.id }}" method="POST">
+
+            {% csrf_token %}
+
+            <div class="row justify-content-center">
+                <div class="form-group col-md-6">
+                    <label class="form-check-label" for="Id"> Id: </label>
+                    <input class="form-control" id="id" type="number" name="id" value={{ shoes.id }}>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="form-group col-md-6">
+                    <label class="form-check-label" for="Nombre"> Nombre: </label>
+                    <input class="form-control" id="nombre" type="text" name="nombre" value={{ shoes.nombre }}>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="form-group col-md-6">
+                    <label class="form-check-label" for="Descripcion"> Descripción: </label>
+                    <input class="form-control" id="descripcion" type="text" name="descripcion" value="{{ shoes.descriptionShoe}}">
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="form-group col-md-6">
+                    <label class="form-check-label" for="Precio"> Precio: </label>
+                    <input id="precio" class="form-control" type="number" name="precio" value="{{ shoes.priceShoes }}">
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="form-group col-md-6">
+                    <label class="form-check-label" for="imageUrl"> Url de la Imagen: </label>
+                    <input id="imageUrl" class="form-control" type="text" name="imageUrl" value="{{ shoes.imageUrl }}">
+                </div>
+            </div>
+
+            <div class="row justify-content-end">
+                <div class="col-4">
+                    <button type="submit" class="btn btn-primary">Editar</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+
+{% endblock %}
