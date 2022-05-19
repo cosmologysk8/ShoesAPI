@@ -24,7 +24,7 @@ def crear_shoes(request):
         shoes.priceShoes = request.POST.get('precio')
         shoes.imageUrl = request.POST.get('imageUrl')
         Shoes.save(shoes)
-        return redirect('/shoes/zapatillas')
+        return redirect('/shoes/zapatillas/')
     else:
         return render(request, 'crear_shoes.html')
 
@@ -41,7 +41,7 @@ def editar_shoes(request,id):
         shoes.priceShoes = request.POST.get('precio')
         shoes.imageUrl = request.POST.get('imageUrl')
         Shoes.save(shoes)
-        return redirect('shoes/zapatillas')
+        return redirect('/shoes/zapatillas/')
 
 def detalle_zapatilla(request, id):
     shoe = Shoes.objects.get(id=id)

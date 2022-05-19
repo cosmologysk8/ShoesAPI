@@ -1,5 +1,4 @@
 from django.urls import path
-from . import views
 from .views import start_index, crear_shoes, editar_shoes, cargar_zapatillas, borrar_shoes, detalle_zapatilla
 
 urlpatterns = [
